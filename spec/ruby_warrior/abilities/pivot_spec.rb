@@ -2,8 +2,8 @@ require 'spec_helper'
 
 describe RubyWarrior::Abilities::Pivot do
   before(:each) do
-    @position = stub
-    @pivot = RubyWarrior::Abilities::Pivot.new(stub(:position => @position, :say => nil))
+    @position = double
+    @pivot = RubyWarrior::Abilities::Pivot.new(double(:position => @position, :say => nil))
   end
   
   it "should flip around when not passing arguments" do

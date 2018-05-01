@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe RubyWarrior::Abilities::Feel do
   before(:each) do
-    @unit = stub(:position => stub, :say => nil)
+    @unit = double(:position => double, :say => nil)
     @feel = RubyWarrior::Abilities::Feel.new(@unit)
   end
   
