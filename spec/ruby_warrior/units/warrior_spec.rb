@@ -65,15 +65,15 @@ describe RubyWarrior::Units::Warrior do
       2.times { |_| warrior.player }
     end
   end
-  
+
   it "should have an attack power of 5" do
     expect(subject.attack_power).to eq(5)
   end
-  
+
   it "should have an shoot power of 3" do
     expect(subject.shoot_power).to eq(3)
   end
-  
+
   it "should appear as @ on map" do
     expect(subject.character).to eq("@")
   end

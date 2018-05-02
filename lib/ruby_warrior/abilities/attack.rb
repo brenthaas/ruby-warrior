@@ -4,7 +4,7 @@ module RubyWarrior
       def description
         "Attacks a unit in given direction (forward by default)."
       end
-      
+
       def perform(direction = :forward)
         verify_direction(direction)
         receiver = unit(direction)

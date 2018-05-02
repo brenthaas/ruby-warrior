@@ -9,7 +9,7 @@ describe RubyWarrior::Abilities::Detonate do
     @floor.add(@warrior, 0, 0, :south)
     @detonate = RubyWarrior::Abilities::Detonate.new(@warrior)
   end
-  
+
   it "should subtract 8 from forward unit and 4 from surrounding units" do
     target_unit = RubyWarrior::Units::Base.new
     target_unit.health = 15
@@ -21,7 +21,7 @@ describe RubyWarrior::Abilities::Detonate do
     expect(target_unit.health).to eq(7)
     expect(second_unit.health).to eq(11)
   end
-  
+
   it "should subtract 8 from left unit and 4 from surrounding units" do
     target_unit = RubyWarrior::Units::Base.new
     target_unit.health = 15
@@ -33,7 +33,7 @@ describe RubyWarrior::Abilities::Detonate do
     expect(target_unit.health).to eq(7)
     expect(second_unit.health).to eq(11)
   end
-  
+
   it "should detonate an explosive if any unit has one" do
     captive = RubyWarrior::Units::Captive.new
     captive.health = 1

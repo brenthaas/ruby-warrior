@@ -5,7 +5,7 @@ describe RubyWarrior::Abilities::DistanceOf do
     @position = double
     @distance = RubyWarrior::Abilities::DistanceOf.new(double(:position => @position, :say => nil))
   end
-  
+
   it "should return distance from stairs" do
     @position.stubs(:distance_of).with(:space).returns(5)
     expect(@distance.perform(:space)).to eq(5)

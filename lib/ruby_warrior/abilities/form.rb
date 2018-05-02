@@ -4,7 +4,7 @@ module RubyWarrior
       def description
         "Forms a golem in given direction taking half of invoker's health. The passed block is executed for each golem turn."
       end
-      
+
       def perform(direction = :forward, &block)
         verify_direction(direction)
         if space(direction).empty?

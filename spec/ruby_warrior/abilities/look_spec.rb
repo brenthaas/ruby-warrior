@@ -5,7 +5,7 @@ describe RubyWarrior::Abilities::Look do
     @unit = double(:position => double, :say => nil)
     @feel = RubyWarrior::Abilities::Look.new(@unit)
   end
-  
+
   it "should get 3 objects at position from offset" do
     @unit.position.expects(:relative_space).with(1, 0).returns(1)
     @unit.position.expects(:relative_space).with(2, 0).returns(2)

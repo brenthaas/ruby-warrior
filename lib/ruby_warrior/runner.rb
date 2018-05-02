@@ -8,7 +8,7 @@ module RubyWarrior
       @stdout = stdout
       @game = RubyWarrior::Game.new
     end
-    
+
     def run
       Config.in_stream = @stdin
       Config.out_stream = @stdout
@@ -16,11 +16,11 @@ module RubyWarrior
       parse_options
       @game.start
     end
-    
+
     private
-    
+
     def parse_options
-      options = OptionParser.new 
+      options = OptionParser.new
       options.banner = "Usage: rubywarrior [options]"
       options.on('-d', '--directory DIR', "Run under given directory")  { |dir| Config.path_prefix = dir }
       options.on('-l', '--level LEVEL',   "Practice level on epic")     { |level| Config.practice_level = level.to_i }

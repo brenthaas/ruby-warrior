@@ -4,7 +4,7 @@ module RubyWarrior
       def description
         "Detonate a bomb in a given direction (forward by default) which damages that space and surrounding 4 spaces (including yourself)."
       end
-      
+
       def perform(direction = :forward)
         verify_direction(direction)
         if @unit.position
@@ -15,7 +15,7 @@ module RubyWarrior
           end
         end
       end
-      
+
       def bomb(direction, x, y, damage_amount)
         if @unit.position
           receiver = space(direction, x, y).unit

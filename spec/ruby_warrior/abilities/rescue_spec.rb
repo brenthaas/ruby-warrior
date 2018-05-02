@@ -5,7 +5,7 @@ describe RubyWarrior::Abilities::Rescue do
     @warrior = RubyWarrior::Units::Warrior.new
     @rescue = RubyWarrior::Abilities::Rescue.new(@warrior)
   end
-  
+
   it "should rescue captive" do
     captive = RubyWarrior::Units::Captive.new
     captive.position = double
@@ -15,7 +15,7 @@ describe RubyWarrior::Abilities::Rescue do
     @rescue.perform
     expect(captive.position).to be_nil
   end
-  
+
   it "should do nothing to other unit if not bound" do
     unit = RubyWarrior::Units::Base.new
     unit.position = double
@@ -25,7 +25,7 @@ describe RubyWarrior::Abilities::Rescue do
     @rescue.perform
     expect(unit.position).not_to be_nil
   end
-  
+
   it "should release other unit when bound" do
     unit = RubyWarrior::Units::Base.new
     unit.bind
