@@ -1,5 +1,6 @@
 require 'rubygems'
 require 'rspec'
+require 'pry-byebug'
 require File.dirname(__FILE__) + '/../lib/ruby_warrior'
 
 RSpec.configure do |config|
